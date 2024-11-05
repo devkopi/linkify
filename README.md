@@ -16,12 +16,12 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/devkopi/linkify
    ```
    
 2. **Navega al directorio del proyecto**:
    ```bash
-   cd tu-repositorio
+   cd repositorio
    ```
    
 3. **Instala las dependencias**:

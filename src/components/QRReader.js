@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import QrScanner from 'react-qr-scanner';
-import jsQR from 'jsqr'; // Asegúrate de tener esta biblioteca instalada
+import jsQR from 'jsqr';
 import { FaCamera, FaInfoCircle } from 'react-icons/fa';
 
 function QRReader() {
@@ -197,12 +197,18 @@ function QRReader() {
               onChange={handleImageUpload}
               className="mt-4 mb-4 border border-gray-300 p-2 rounded"
             />
+            {file && <p className="text-gray-600">Archivo seleccionado: {file.name}</p>}
             <button
               onClick={handleFileClear}
               className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition duration-200"
             >
               Limpiar Archivo
             </button>
+            {imageError && (
+              <div className="mt-4 p-4 bg-red-200 border border-red-500 rounded-lg shadow-md">
+                <p className="text-red-600">{imageError}</p>
+              </div>
+            )}
             {imageResult && (
               <div className="mt-4 p-4 bg-white border border-gray-300 rounded-lg shadow-md max-w-sm mx-auto">
                 <h2 className="text-xl font-semibold text-gray-800 mb-2">Resultado de Imagen:</h2>
